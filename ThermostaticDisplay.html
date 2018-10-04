@@ -4,16 +4,54 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Thermostat</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
 
 	<header id="your-thermostat"><p>Your Thermostat</p></header>
 
+<h1>Your Thermostat is set to <p id="the-temperature"></p></h1>
 
+<section>
+  <h1>Outside temperature: <span id="current-temperature"></span></h1>
+  <select id="current-city">
+		<option value="anchorage">Anchorage</option>
+	<option value="Barrow">Barrow</option>
+	<option value="Brasilia">Brasilia</option>
+	<option value="buenos aires">Buenos Aires</option>
+	<option value="Cairns">Cairns</option>
+	<option value="Caracas">Caracas</option>
+	<option value="Christchurch">Christchurch</option>
+	<option value="honolulu">Honolulu</option>
+	<option value="Istanbul">Istanbul</option>
+	<option value="Lima">Lima</option>
+	<option value="liverpool">Liverpool</option>
+	<option value="london">London</option>
+	<option value="Los Angeles">Los Angeles</option>
+	<option value="manchester">Manchester</option>
+	<option value="marseille">Marseille</option>
+	<option value="Mexico City">Mexico City</option>
+	<option value="New York">New York</option>
+	<option value="nice">Nice</option>
+	<option value="Pahrump">Pahrump</option>
+	<option value="paris">Paris</option>
+	<option value="Phoenix">Phoenix</option>
+	<option value="Rosario">Rosario</option>
+	<option value="Saint Petersburg">Saint Petersburg</option>
+	<option value="sao paulo">Sao Paulo</option>
+	<option value="Shanghai">Shanghai</option>
+	<option value="Stanley">Stanley</option>
+	<option value="Sydney">Sydney</option>
+	<option value="Tbilisi">Tbilisi</option>
+	<option value="Tiksi">Tiksi</option>
+	<option value="tokyo">Tokyo</option>
+	<option value="Vancouver">Vancouver</option>
 
+  </select>
+</section>
 
-Your current temperature is <p id="current-temperature"></p>
+<br> <br>
 
 Increase Temperature <button id="increase-temperature" type="button">Up</button>
 
@@ -29,10 +67,9 @@ Turn on/off Power Save mode <button id="power-save-on" name="power-save-on" valu
 <br>
 Power Save mode is currently <p id="displayPSM"></p>
 
-<script
-  src="https://code.jquery.com/jquery-3.3.1.slim.js"
-  integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
-  crossorigin="anonymous"></script>
+<button id="reset" type="button">Reset Thermostat</button>
+
+
 <script src="src/Thermostat.js"></script>
 <script src="Interface.js"></script>
 </body>
