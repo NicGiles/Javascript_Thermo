@@ -13,28 +13,30 @@
 
 
 
-	<div id="container"  >
-
-Your current temperature is <p id="current-temperature">Thermostat.temperature</p>
+Your current temperature is <p id="current-temperature"></p>
 
 Increase Temperature <button id="increase-temperature" type="button">Up</button>
 
-Increase Temperature <button id="decrease-temperature" type="button">Down</button>
+Increase Temperature <button id="decrease-temperature" type="button">Down</button><br>
 
-Your Energy Usage is <p id="energy-usage">Thermostat.energyUsage</p>
+<br>
+Your Energy Usage is <p id="energy-usage"></p>
 
-Turn on/off Power Save mode <input type="radio" name="power-save" value="On">On</input>
-<input type="radio" name="power-save" value="Off">Off</input>
 
-</div>
+Turn on/off Power Save mode <button id="power-save-on" name="power-save-on" value="On">On</button>
+<button id="power-save-off" name="power-save-off" value="Off">Off</button>
+
+<br>
+Power Save mode is currently <p id="displayPSM"></p>
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.slim.js"
   integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
   crossorigin="anonymous"></script>
 <script src="src/Thermostat.js"></script>
-
+<script src="Interface.js"></script>
 </body>
+
 
 
 

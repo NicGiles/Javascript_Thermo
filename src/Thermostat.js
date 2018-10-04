@@ -28,10 +28,26 @@ Thermostat.prototype.reset = function() {
   this.temperature = DEFAULT_TEMP;
 };
 
+Thermostat.prototype.powerSaveOn = function() {
+  this.powerSave = true;
+  if (this.temperature > MAX_TEMP_POWER_SAVE) {
+    this.temperature = MAX_TEMP_POWER_SAVE};
+};
+
+Thermostat.prototype.powerSaveOff = function() {
+  this.powerSave = false;
+  };
+
 
 Thermostat.prototype._getMaxTemp = function() {
   return this.powerSave ? MAX_TEMP_POWER_SAVE : MAX_TEMP;
 };
+
+Thermostat.prototype.displayPSM = function() {
+return this.powerSave === true ? "On" : "Off";
+};
+
+
 
 Thermostat.prototype._getIncrement = function(number, maxTemp) {
   if (this.temperature + number > maxTemp) {
