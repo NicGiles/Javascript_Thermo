@@ -6,22 +6,35 @@
 	<title>Thermostat</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
+<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
 
-<body>
 
-	<header id="your-thermostat"><p>Your Thermostat</p></header>
+<body style="background: #648880;
+  background: linear-gradient(to right, #f6f1d3, #648880, #293f50);">
 
-<h1>Your Thermostat is set to <p id="the-temperature"></p></h1>
+	<script type="text/javascript" src="segment-display.js"></script>
+	<script type="text/javascript">
+
+		</script>
+
+
+<h1>
+
+	</p></h1>
 
 <section>
-  <h1>Outside temperature: <span id="current-temperature"></span></h1>
-  <select id="current-city">
+
+<center>
+
+	<center> </span></h1>
+
+<select id="current-city" div style="font-family: 'Orbitron', sans-serif;">
+
 		<option value="anchorage">Anchorage</option>
-	<option value="Barrow">Barrow</option>
 	<option value="Brasilia">Brasilia</option>
 	<option value="buenos aires">Buenos Aires</option>
 	<option value="Cairns">Cairns</option>
-	<option value="Caracas">Caracas</option>
+	<option value="caracas">Caracas</option>
 	<option value="Christchurch">Christchurch</option>
 	<option value="honolulu">Honolulu</option>
 	<option value="Istanbul">Istanbul</option>
@@ -41,40 +54,91 @@
 	<option value="Saint Petersburg">Saint Petersburg</option>
 	<option value="sao paulo">Sao Paulo</option>
 	<option value="Shanghai">Shanghai</option>
-	<option value="Stanley">Stanley</option>
 	<option value="Sydney">Sydney</option>
 	<option value="Tbilisi">Tbilisi</option>
 	<option value="Tiksi">Tiksi</option>
 	<option value="tokyo">Tokyo</option>
 	<option value="Vancouver">Vancouver</option>
 
-  </select>
-</section>
 
-<br> <br>
 
-Increase Temperature <button id="increase-temperature" type="button">Up</button>
-
-Increase Temperature <button id="decrease-temperature" type="button">Down</button><br>
+</select> <div style="font-family: 'Orbitron', sans-serif;"> <br>is currently <br>
 
 <br>
-Your Energy Usage is <p id="energy-usage"></p>
+
+	<div style="font-family: 'Orbitron', sans-serif;" id="current-temperature">
+</section></div><br><br>
+<br>
+<section> <center>
+<div style="font-family: 'Orbitron', sans-serif;">
+
+Your Thermostat is set to
+<br><p id="the-temperature">
+
+</section></div>
+
+<div style="font-family: 'Orbitron', sans-serif;" id="current-temperature">
+<center><button style="font-family: 'Orbitron', sans-serif;" button id="increase-temperature" type="button">Turn Up</button>
+<button style="font-family: 'Orbitron', sans-serif;" button id="decrease-temperature" type="button">Turn Down</button> <br> <br>
 
 
-Turn on/off Power Save mode <button id="power-save-on" name="power-save-on" value="On">On</button>
-<button id="power-save-off" name="power-save-off" value="Off">Off</button>
 
 <br>
-Power Save mode is currently <p id="displayPSM"></p>
+Based on this temperature your current energy usage is <p id="energy-usage"></p>
 
-<button id="reset" type="button">Reset Thermostat</button>
+
+<br><br>Power Save mode? <button id="power-save-on" name="power-save-on" value="On">✅</button>
+<button id="power-save-off" name="power-save-off" value="Off">❌</button><br>
+
+<br>
+Power Save mode is currently <p id="displayPSM"></p><br><br>
+
+
+<br><br>
+
+<style>
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+.container .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #f1f1f1;
+    color: black;
+    font-size: 16px;
+    padding: 16px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.container .btn:hover {
+    background-color: black;
+    color: white;
+}
+</style>
+
+<div class="container">
+  <button id="reset" class="btn">Reset</button>
+</div>
+
+
 
 
 <script src="src/Thermostat.js"></script>
 <script src="Interface.js"></script>
 </body>
-
-
-
 
 </html>

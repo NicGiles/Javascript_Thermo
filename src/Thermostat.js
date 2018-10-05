@@ -59,10 +59,10 @@ Thermostat.prototype._getIncrement = function(number, maxTemp) {
 
 Thermostat.prototype.energyUsage = function() {
   if (this.temperature < LOW_ENERGY) {
-    return 'low-usage';
+    return 'Low 😊 ';
   } else if (this.temperature < HIGH_ENERGY) {
-    return 'medium-usage';
+    return "Medium 🤔";
   } else {
-    return 'high-usage';
+    return 'Too High! 😡';
   };
 };
